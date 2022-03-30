@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab04_list_table.html</title>
+</head>
+<body>
+    <dl>
+        <dt>토마토</dt>
+        <dd>라자냐 재료</dd>
+    </dl>
+
+<!--리스트-->
+    <ul>
+        <li>우유</li>
+        <li>요거트</li>
+        <li>블루베리</li>
+    </ul>
+
+    <ol>
+        라면 끓이는 방법
+        <li>물을 넣는다</li>
+        <li>스프를 넣는다</li>
+    </ol>
+
+
+
+<!-- 테이블 -->
+<table border="1">
+    <tr>
+        <th>
+            제목1
+        </th>
+        <th>
+            제목2
+        </th>
+        <th>
+            제목3
+        </th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+</table>
+</body>
+</html>
