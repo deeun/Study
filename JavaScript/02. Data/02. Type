@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab02_type.html</title>
+</head>
+<body>
+    <!--원시타입 vs 참조타입-->
+    <script>
+        //Number
+        console.log(1);
+        console.log(3.2);
+        console.log(-1);
+        console.log(10/3);
+    </script>
+
+    <script>
+        //String: 문자열
+        console.log("string");
+        console.log("it's my laptop")
+        console.log("it's \"my\" laptop")
+        // console.log('오늘은 
+        // 수요일 입니다.') //error
+        console.log(`오늘은 
+        수요일입니다.`) //백틱(줄바꾸기)
+    </script>
+
+    <script>
+        // Boolean : 불리언
+        // 참 (True), 거짓 (False)
+        console.log(true);
+        console.log(false);
+    </script>
+
+    <script>
+        //undefined & null
+        //undefined: 값이 할당되지 않은 상태
+        let x;
+        console.log(x + 10); // NaN : Not a Number
+
+        //null : 어떤 자료형에도 속하지 않음
+        console.log(null);
+    </script>
+</body>
+</html>
