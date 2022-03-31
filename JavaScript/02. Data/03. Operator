@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab03_operator.html</title>
+</head>
+<body>
+    <script>
+        //연산자
+        //산술 연산
+        console.log(2 + 2);
+        console.log(30 % 7); //나머지
+        console.log(10 ** 4); //제곱
+        
+        //문자열 연산
+        const name = 'js';
+        const name2 = 'programming'
+        console.log(name + " " + name2);
+        console.log(name+3);
+
+        //증감연산 : ++, --
+        let num = 10;
+        console.log(num); //10
+        console.log(++num) //11
+        console.log(num++) //11
+        console.log(num) //12
+    </script>
+
+    <script>
+        //할당연산 : =, +=, -=, *=, ...
+        let num2 = 20;
+        console.log(num2)
+
+        num2 += 10;
+        console.log(num2);
+    </script>
+
+    <script>
+        //비교연산 : ==, <, <=, >, >=, !=
+        let num3 = 30;
+        let num4 = 40;
+        console.log(num3 == num4);
+        console.log(num3 != num4);
+
+        console.log(num3 ==30);
+        console.log(num3 =='30'); //크기만 비교
+        console.log(num3 ==='30'); //크기 + 타입 비교
+
+        //typeof
+        console.log(typeof(num3));
+        console.log(typeof('30'));
+    </script>
+
+    <script>
+        //논리연산 : &&(and), ||(or), 
+        let t = true;
+        let f = false;
+
+        console.log(t && t); //둘 다 참이어야 참
+        console.log(t && f);
+        console.log(f && f);
+
+        console.log(t || t); //하나라도 참이면 참
+        console.log(t || f);
+        console.log(f || f);
+
+        console.log(!t);
+        console.log(!f);
+    </script>
+
+    <script>
+        //타입변환
+        //암묵적 타입변환 vs 명시적 타입변환
+        //숫자
+        console.log(typeof (1+'2'));
+        console.log(typeof(1+''));
+        console.log(typeof(NaN + ''))
+
+        //문자열
+        console.log(+null);
+
+
+
+    </script>
+</body>
+</html>
