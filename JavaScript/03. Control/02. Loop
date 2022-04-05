@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab02_loop.html</title>
+</head>
+<body>
+    <script>
+        //while : 조건이 참일 때, 특정 기능을 반복
+        // while(true) {
+        //     console.log('while문 실행')
+        // }
+
+        //while문의 반복 횟수 제한
+        let i = 0;
+        while (i < 10) {
+            console.log ('while문 실행');
+            i++;
+        }
+        
+        //for문: 특정 횟수만큼 반복하는 구문
+        for(let i = 0; i < 10 ; i++ ) {
+            let i = 10;
+            document.write('for문 실행');
+            document.write('<br>')
+        }
+
+      
+        for(let i = 10; i >= 0 ; i--) {
+            document.write('카운트 다운 : ' + i + '초');
+            document.write('<br>')
+        }
+
+    </script>
+</body>
+</html>
