@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab02_array</title>
+</head>
+<body>
+    <script>
+      
+        //heap
+        //얕은 복사
+        let arr = [1, 2, 3];
+        let shallowArr = arr;
+        let arr2 = [1, 2, 3];
+
+        console.log(arr == shallowArr);
+        console.log(arr === shallowArr);
+
+        console.log('--------------');
+
+        console.log (arr == arr2);
+        console.log (arr === arr2);
+
+        arr[0] = 0;
+        console.log(arr);
+        console.log(shallowArr);
+
+        //깊은 복사
+        let deepArr1 = arr.slice();
+        let deepArr2 = arr.concat();
+        let deepArr3 = Array.from(arr);
+
+        console.log(arr == deepArr1);
+        console.log(arr == deepArr2);
+        console.log(arr == deepArr3);
+    </script>
+</body>
+</html>
