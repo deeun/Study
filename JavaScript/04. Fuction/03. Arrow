@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab03_arrow.html</title>
+</head>
+<body>
+    <script>
+        let arrow1 = function(){
+            console.log('arrow function');
+        }
+
+        let arrow2 = () => {console.log('arrow function');}
+        arrow2();
+
+
+        //sum, minus에 대한 연산 결과 반환하는 화살표함수 만들기
+        let sum1 = (a, b) => {return a + b} //return 사용할때는 중괄호 필수
+        let sum2 = (a, b) => a + b;
+        sum1(1, 2);
+        console.log(sum1(1, 2));
+
+        let minus = (a, b) => {return a - b}
+        minus(1, 2);
+        console.log(minus(1, 2));
+
+    // 즉시 실행 함수
+    // (function immediatelyFunc(){
+    //     alert('welcome');
+    // }());
+
+    // (function(){
+    //     alert('welcome');
+    // }());
+
+    let data = 'wecome';
+    // (function immediatelyFunc2(data){
+    //     alert(data);
+    // }(data));
+
+    (function immediatelyFunc3(data){
+        alert(data);
+    })(data);
+
+    </script>
+</body>
+</html>
