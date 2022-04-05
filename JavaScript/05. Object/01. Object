@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab01_object.html</title>
+</head>
+<body>
+    <script>
+        //object
+        //리터럴
+        let obj1 = {name: 'js', age: 18};
+        console.log(obj1);
+        console.log(typeof(obj1));
+        
+        let obj2 = {};
+        obj2.name = 'js2';
+        console.log(obj2);
+        console.log(obj2.name);
+
+        //생성자
+        let obj3 = new Object(); //대문자!
+        console.log(obj3);
+        obj3.color = 'pink'
+        console.log(obj3.color)
+
+        //사용자 정의 함수
+        //어떤 객체 만들지 먼저 정하기 (예. customer)
+        //속성 정하기 (예. id)
+        //기능: 값을 돌려주는 기능 (getXXX)
+        //      값을 새롭게 바꿔주는 기능 (setXXX)
+        function Customer(id){
+            this.id = id;
+
+            this.getId = function(){
+            return this.id;
+            }
+
+            this.setId = function(newId){
+            this.id = newId;
+            }   
+        }
+
+        let obj4 = new Customer('js');
+        console.log(obj4);
+        console.log(obj4.id);
+        console.log(obj4.getId());
+
+        //js -> js4로 바꾸기
+        //1번째 방법
+        obj4.id = 'js4';
+        console.log(obj4.id);
+
+        //2번째 방법
+        obj4.setId('js4');
+        console.log(obj4.id);
+
+        obj4.getGrade = function(){
+            console.log('등급 출력')
+        }
+        obj4.getGrade();
+
+        obj4.getGrade();
+        console.log(obj4['id']);
+
+        console.log(obj4.id);
+        delete obj4.id;
+        console.log(obj4.id);
+        
+        // console.log(obj4.getId());
+        // delete obj4.getId;
+        // console.log(obj4.getId());
+        
+        let mong = {species: 'bichon', name: 'mongsil', age: 7};
+        console.log(mong.species);
+
+        function Dog(species, name, age){
+            this.species = species;
+
+            this.getSpecies = function(){
+            return this.species;
+            } 
+        }
+        
+        
+    
+
+    </script>
+</body>
+</html>
