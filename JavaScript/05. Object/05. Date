@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab05_date.html</title>
+</head>
+<body>
+    <script>
+        let dateObj = new Date();
+        console.log(dateObj);
+
+        console.log('년: ' + dateObj.getFullYear());
+        console.log('월: ' + dateObj.getMonth()); //+1
+        console.log('요일: ' + dateObj.getDay());
+        console.log('일: ' + dateObj.getDate());
+        console.log('시: ' + dateObj.getHours());
+        console.log('분: ' + dateObj.getMinutes());
+
+
+    </script>
+</body>
+</html>
