@@ -1,0 +1,40 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+/* reset.css : 기본 css 스타일 초기화 */
+html, body {
+    margin: 0;
+    font-family: 'Titillium Web', 'Open Sans';
+}
+
+/* style.css */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* viewport height */
+}
+
+.container {
+    text-align: center;
+}
+
+.container h2, p {
+    font-size: 3rem;
+}
+
+.container p {
+    color: gray;
+}
+
+.btn {
+    border: 2px dashed black;
+    font-family: inherit; /* 부모 속성을 전달받음. */
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    background: transparent;
+    padding: 0.5rem 0.75rem; /* 상하 0.5rem, 좌우 0.75rem */
+    /* padding: 0.5rem 0.75rem 0.5rem 0.75rem; 12시부터 시계방향 */
+}
