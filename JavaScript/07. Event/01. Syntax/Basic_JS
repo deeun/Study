@@ -1,0 +1,74 @@
+// 2. EventHaldner property 방식 - HTML과 JS를 분리,
+
+// 프로그래밍 언어(Programming Language)
+// 코드지만, 한편으론 문장.(가독성)
+const evPropButton = document.getElementById("btn-ev-prop");
+console.dir(evPropButton); // dir : directory
+// js와 java는 camelCase
+
+// property로는 id, author, title
+// id는 1
+// author는 헤밍웨이
+// title은 ??
+
+const book = { // 문선화님! , book 'object'
+    id : 1, // property
+    author : '해밍웨이',
+    title : '노인과 바다'
+}
+
+// book.title = '맥베스'; // 맥베스라고 하는 '값(value)'은 title이라고 하는 property에 할당할 수 있음.
+
+// JS에서 함수는 일급객체이기 때문에, 객체는 값이고, 값은 프로퍼티에 할당할 수 있음.
+evPropButton.onclick = function() { // 익명함수 생성 및 할당
+    console.log('Called by event property');
+}
+
+// 하나의 이벤트 밖에 등록 불가. (화살표 함수 활용)
+// '새롭게 등록된 이벤트 핸들러' 출력되는 이벤트 핸들러 함수 작성 및 할당해보기.
+evPropButton.onclick = () => console.log('새롭게 등록된 이벤트 핸들러');
+
+// 3. addEventListener - EventHandler property(여기서는 onclick이라는 property)
+// 에 영향을 미치지 않음. 
+
+// on 접두사 생략
+const addEvLsnrButton = document.getElementById("btn-add-ev-lsnr");
+console.log(addEvLsnrButton);
+
+// 함수 선언문 방식으로 이벤트 핸들러 작성
+function buttonHandler() {
+    console.log('double clicked!');
+}
+
+// addEventListener() 메서드의 인자값으로 함수를 넘겼습니다.
+// 그때 인자값으로 넘겨진 함수를 Callback function(콜백함수)
+// -> 어떤 함수의 인자값으로 함수를 넘겼을 때 넘겨진 함수를 콜백함수라고 함.
+addEvLsnrButton.addEventListener('dblclick',buttonHandler);
+
+// 화살표 함수로 buttonHandler2라는 이름의 함수 작성
+// 'mouseover' 출력되도록
+
+// 마우스를 버튼 위로 이동시켰을 때 발생하는 이벤트?
+const buttonHandler2 = () => console.log('MouseOver!');
+
+addEvLsnrButton.addEventListener('mouseover', buttonHandler2);
+
+// click 이벤트 화살표 함수를 콜백함수 파라미터 자리에 직접 작성
+// 'by addEventListener with arrow function' 출력되도록
+
+addEvLsnrButton.addEventListener('click', () => {
+    console.log("addEventListener with arrow functoin");
+});
+
+// 이벤트 핸들러 제거
+// 1. EventHandler attribute 방식 : onclick attribute 코드 제거
+
+// 2. EventHandler property 방식  : 해당 property에 null값 할당.
+evPropButton.onclick = null;
+
+// 3. addEventListener method 방식 : 별도의 이벤트 제거 함수 호출
+addEvLsnrButton.removeEventListener('dblclick', buttonHandler);
+addEvLsnrButton.removeEventListener('mouseover', buttonHandler2);
+
+// click이벤트도 제거해주세요 
+// 익명함수(화살표 함수)는 제거 불가.
