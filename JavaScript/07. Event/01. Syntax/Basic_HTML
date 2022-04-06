@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 이벤트(Javascript Event) 추가, 제거</title>
+</head>
+<body>
+    <h1>Javascript 이벤트(Javascript Event) 추가, 제거</h1>
+    <hr>
+
+    <a href="https://developer.mozilla.org/ko/docs/Web/Events">Event 참조</a>
+
+    <!-- 클릭했을 때, 구현되는 것들 -->
+    <!-- 사용자의 동작이 발생했을 때 -->
+    
+    <!-- 1. EventHandler(이벤트 담당자) attribute 방식 -->
+    <h3>EventHandler attribute way</h3>
+    <button onclick="display()">Click me!</button>
+    <script>
+        function display() { // 이벤트 핸들러 함수
+            console.log('button clicked!');
+        }
+    </script>
+
+    <!-- 2. EventHaldner property 방식 -->
+    <h3>EventHandler property way</h3>
+    <!-- button#btn-ev-prop{Click me!} -->
+    <button id="btn-ev-prop">Click me!</button>
+
+    <!-- 3. addEventListener method 방식 -->
+    <h3>addEventListener method way</h3>
+    <button id="btn-add-ev-lsnr">click me!</button>
+
+    <script src="event_basic.js"></script>
+</body>
+</html>
