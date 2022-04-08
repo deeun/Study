@@ -1,0 +1,58 @@
+//1. 함수가 호출된 순서대로 순차적으로 실행됨 - 동기 (synchronus)
+const firstFunc = () => console.log('첫번째 함수 호출됨');
+
+const someLongTasks = () => {
+    console.log('--------------');
+    console.log('특정 작업(task) 처리중 ... 시간이 오래 소요됨');
+    console.log('--------------');
+};
+
+const secondFunc = () => {
+    console.log('두번째 함수 호출됨');
+};
+
+firstFunc();
+someLongTasks();
+secondFunc();
+
+
+//일정한 작업시간이 경과한 이후에 함수가 호출(실행)될 수 있도록 시간 지연시켜주는 sleep() 작성
+/**
+ * 
+ * @param {*} callbackFunc 
+ * @param {*} delay : 지연시킬 시간 
+ */
+
+//현재 시간을 숫자(ms)로 반환하는 메서드
+// console.log(Date.now());
+
+function sleep (callbackFunc, delay) {
+     console.log('시간 지연중..')
+     const delayedTime = Date.now() + delay;
+
+     while(Date.now() < delayedTime);
+
+     callbackFunc();    
+}
+
+function firstwork() {
+    console.log('첫번째 작업 수행');
+}
+
+function secondwork() {
+    console.log('두번째 작업 수행');
+}
+
+//첫번째 작업(secondWork())을 3초(3 * 1000) 동안 블로킹 시키고 싶음
+sleep(firstwork, 3 * 1000);
+secondwork();
+
+
+/**
+ * 현재 실행 중인 작업이 종료할 때까지 다음에 실행될 작업이 대기하는 방식을
+ * 동기 처리라고 함
+ * 
+ * 동기처리방식은 작업을 순서대로 하나씩 (순차적으로) 처리하기 때문에
+ * 장점: 실행순서가 보장됨
+ * 단점: 앞선 작업이 종료될 때까지 이후 작업들이 블로킹 됨
+ */
