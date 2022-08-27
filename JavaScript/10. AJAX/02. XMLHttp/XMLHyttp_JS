@@ -1,0 +1,26 @@
+const xhr = new XMLHttpRequest(); //XMLHttpRequest API 로딩
+
+//요청을 보낼 준비
+// xhr.open(요청 메소드, 요청 URL)
+xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos') // 'GET': 서버의 데이터를 조회하고 싶을 때 사용
+console.log(`OPENED, ${xhr.readyState}`); // OPENED, 1
+
+//readState 프로퍼티의 값이 변경될 때 마다 arrow fn 호출
+xhr.onreadystatechange = () => {
+    if(xhr.readyState == 2) {
+       console.log(`HEADERS_RECIEVED ${xhr.readyState}`);   
+    }
+
+    //데이터 응답(로딩) 완료와 같음 == onload
+    if(xhr.readyState == 4 && xhr.status == 200) {
+        console.log(`response data: ${xhr.responseText}`);
+    }
+};
+
+//브라우저가 데이터를 받는 동안 주기적으로 발생
+xhr.onprogress = () => console.log(`LOADING, ${xhr.readyState}`);
+
+// 데이터 응답(로딩)이 완료된 경우
+xhr.onload = () => console.log(`DONE, ${xhr.readyState}`);
+
+xhr.send();

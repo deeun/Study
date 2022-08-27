@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab01_variable.html</title>
+</head>
+<body>
+    <script>
+        var x; //선언
+        x = 10; //할당
+        //선언+할당 = 초기화
+        console.log(x);
+
+        var x = 10, y = 11;
+
+        console.log(x + y);
+        var z = x + y;
+        console.log(z)
+    </script>
+
+    <script>
+        //let
+        var a = 10;
+        console.log(a);
+        var a = 20;
+        console.log(a);
+
+        let b = 30;
+        console.log(b);
+        // let b = 40;
+        // console.log(b);
+
+        //const
+        const c = 50;
+        console.log(c)
+        c = 60;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 공간분할 : 블록-->
+    <p>p는 블록</p>
+    <div>div는 블록</div>
+
+    <br><br>
+    <!-- 공간분할 : 인라인 -->
+    <a href="">a는 인라인</a>
+    <span>span도 인라인</span>
+</body>
+</html>

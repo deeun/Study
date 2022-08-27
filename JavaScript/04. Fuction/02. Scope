@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab02_scope.html</title>
+</head>
+<body>
+    <script>
+        // scope : 전역(global)변수, 지역(local)변수
+        let color1='black'
+        function getColor(){
+            let color1='yellow'
+            console.log(color1)
+        }
+        console.log(color1);
+        getColor();
+
+
+        // var vs let
+        //호이스팅 (hoisting) : "선언"
+
+        //var 테스트 (O)
+        console.log(test);
+        var test = 'test';
+        
+
+        //let 테스트 (X)
+        console.log(test2);
+        let test2 = 'test2';
+        
+        //호이스팅: 실행컨텍스트를 위한 과정
+        //변수, 함수, 클래스 등 : 스코프에 등록 필요
+        //과정
+        //1. 선언 
+        //2. 초기화(메모리에 등록)
+        //3. 할당
+
+        //var vs let
+        //var는 선언+초기화 단계가 한번에 이루어짐 (선언과 동시에 undefined 값을 가짐)
+        //let은 초기화를 별도로 꼭 해줘야한다.
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab02_event</title>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>메뉴</h1>
+        <div id="desc">설명</div>
+        <hr>
+    
+        <h3>서비스</h3>
+        <button id="check" class="nav" name="check">조회</button>
+        <button id="transfer" class="nav">이체</button>
+        <ul class="check-service">
+            <li>계좌조회</li>
+            <li>수표조회</li>
+            <li>오픈뱅킹</li>
+        </ul>
+    
+        <p id="content"></p>
+        <p id="content2"></p>
+        <p id="content3"></p>
+
+        <h3>회원가입</h3>
+        ID: <input type = "text" id="newID">
+
+        
+    </div>
+    
+    <script>
+        const checkElement = document.getElementById('check');
+        
+        // 인라인 방식
+        function clickFunc() {
+            document.getElementById('content').innerHTML = '계좌조회(인라인)';
+        }
+
+        // function clickFunc2() {
+        //     document.getElementById('content2').innerHTML = '계좌조회(인라인2)';
+        // }
+        
+        // 프로퍼티 방식 : 중복 이벤트 등록 불가능
+        // checkElement.onclick = function clickFunc(){
+        //     document.getElementById('content').innerHTML = '계좌조회(클릭 이벤트 발생)';
+        // }
+
+        // checkElement.onclick = function clickFunc(){
+            //     document.getElementById('content2').innerHTML = '계좌조회(클릭 이벤트 발생2)';
+            // }
+        
+
+        // 이벤트 핸들러 방식 : 중복 이벤트 등록 가능
+        // checkElement.addEventListener('click', function clickFunc(){
+        //     document.getElementById('content').innerHTML = '계좌조회(리스너)';
+        // });
+
+        // checkElement.addEventListener('click', function clickFunc(){
+            //     document.getElementById('content2').innerHTML = '계좌조회(리스너2)';
+            // });
+
+            
+        // const checkService = document.getElementsByClassName('check-service');
+        const checkService = document.querySelector('.check-service');
+        // MouseEvent
+        // mouseover
+        checkElement.addEventListener('mouseover', function(){
+            // console.log('check 실행 확인over');
+            // console.log(checkService);
+            // console.log(checkService.classList);
+            checkService.classList.remove('hide');
+        });
+
+        // mouseout
+        checkElement.addEventListener('mouseout', function(){
+            // console.log('check 실행 확인out');
+            checkService.classList.add('hide');
+        });
+
+        // mousedown / up 
+        checkElement.addEventListener('mousedown', function(){
+        // console.log('check 실행 확인out');
+            document.getElementById('desc').style.color = 'red';
+        });
+
+        // focus, blur
+
+        // keyboard : up/down, press, ....
+		const inputElement = document.getElementById('newId');
+		inputElement.addEventListener('keydown', function(e){
+            document.getElementById('content3').innerHTML += e.key;
+        });
+</script>
+</body>
+</html>

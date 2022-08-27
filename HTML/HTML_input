@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab05_input.html</title>
+</head>
+<body>
+    <!-- input -->
+    <form action = "">
+        텍스트를 입력하세요 <br>
+        <input type="text">
+    </form>
+    <hr>
+
+    <!-- input : password -->
+    <form action = "" method = "post">
+        ID : <input type="text"> <br>
+        PW : <input type="password">
+    </form>
+ 
+    <hr>
+
+
+    <!-- input : radio -->
+    <form action = "">
+        <input type = "radio" name="gender" id="" value=""> 남
+        <input type = "radio" name="gender" id="" value=""> 여
+    </form>
+
+    <hr>
+
+    <!-- input : checkbox -->
+    <form action = "">
+        <input type = "checkbox" name = "fmovie" value=""> 공포
+        <input type = "checkbox" name = "fmovie" value=""> 다큐
+        <input type = "checkbox" name = "fmovie" value=""> 액션
+    </form>
+
+    <hr>
+
+    <!--button -->
+    <button type="button">버튼</button>
+
+    <hr>
+
+    <!-- input : submit -->
+    <form action = "https://search.naver.com/search.naver?" target = "_blank">
+        N : <input type = "text" name = "query">
+        <input type = "submit">
+    </form>
+
+    <hr>
+
+    <!-- select -->
+    <select name = "grade" id = "" >
+        <option value="C">2500만원 이하</option>
+        <option value="B">3000만원 이하</option>
+        <option value="A">3500만원 이하</option>
+
+    </select>
+
+    <hr>
+
+    <!-- 멀티미디어 : video -->
+    <video src="/multimedia/TeachableMachine.mp4" controls autoplay></video>
+
+</body>
+</html>

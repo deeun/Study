@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //조건문
+          //if
+          let age = 20
+          if(age > 17) {
+              console.log('투표 가능');
+          }
+          if(age <= 17) {
+              console.log ('투표 불가능');
+          }
+  
+          // else (if)
+          if(age > 17) {
+              console.log('투표 가능');
+          }else {
+              console.log ('투표 불가능');
+          }
+  
+          //else if
+          if(age > 17) {
+              console.log('투표 가능');
+          } 
+          else if(age <=17 && age >0) {
+              console.log ('투표 불가능');
+          }
+  
+          //switch문
+          let stuff = 'bronze'
+          switch(stuff) {
+              case 'gold':
+                  console.log('금입니다.');
+                  break;
+              case 'silver':
+                  console.log('은입니다.');
+                  break;
+              default:
+                  console.log('격려합니다.');
+          }
+          </script>
+</body>
+</html>

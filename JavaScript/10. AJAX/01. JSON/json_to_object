@@ -1,0 +1,33 @@
+const book = {
+    title: "노인과 바다",
+    author: "해밍웨이",
+    isSold: false,
+    genre: ["소설", "비극"],
+};
+
+
+// 서버에서 응답한 데이터라고 가정
+const responseData = JSON.stringify(book);
+const parsedData = JSON.parse(responseData);
+console.log(responseData);
+console.log(parsedData);
+console.log(parsedData.title);
+
+
+
+const books = [
+    {id: 1, title: '여름', author: '이디스 워튼', isSold: true},
+    {id: 1, title: '오만과 편견', author: '제인 오스틴', isSold: true},
+    {id: 1, title: '동급생', author: '프레드 울만', isSold: false},
+];
+
+//서버에서 응답한 데이터라고 가정
+const responseData2 = JSON.stringify(books);
+console.log(responseData2);
+
+//JSON 포맷의 문자열을 배열로 변환 (deserialization)
+const parsedData2 = JSON.parse(responseData2);
+//parsedData: 파싱처리가 완료된 데이터
+console.log(parsedData2);
+console.log(typeof parsedData2);
+

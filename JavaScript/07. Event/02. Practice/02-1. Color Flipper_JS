@@ -1,0 +1,23 @@
+const btn = document.getElementById('btn');
+const color = document.querySelector('.color');
+
+btn.addEventListener('click', () => {
+    const [r, g, b] = getRandomNumber(0, 255);
+    const rgbColor = `rgba(${r}, ${g}, ${b})`;
+
+    color.textContent = rgbColor; 
+    color.style.color = rgbColor;
+    document.body.style.backgroundColor = rgbColor;
+});
+
+// rgb 랜덤값 추출 함수
+function getRandomNumber(min, max) {
+    let randomRGBArray = [];
+
+    for (let i = 0; i < 3; i++) {
+        const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+        randomRGBArray.push(randomNumber);
+    }
+
+    return randomRGBArray;
+}

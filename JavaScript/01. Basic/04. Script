@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab02_script.html</title>
+     <!--HTML 내부 : head-->
+    <script>
+        console.log('head');
+        document.getElementById('head').innerHTML = 'Hello, head';
+    </script>
+    <!-- HTML 외부-->
+    <script src="/01. basic/lab02.js"></script>
+</head>
+<body>
+    <div id="head">head</div>
+    <div id="body">body</div>
+    <div id="footer">footer</div>
+    <!--HTML 내부 : body-->
+    <script>
+        document.getElementById('body').innerHTML = 'Hello, body';
+    </script>
+
+    <!-- HTML 외부-->
+    <!-- <script src="/01. basic/lab02.js"></script> -->
+</body>
+</html>
